@@ -33,7 +33,10 @@ def map(cmd):
     print("sasuke.py: bad option")
     sys.exit(1)
 
-# map the action
+# map the action (but check if no options were provided)
+if len(sys.argv) == 1:
+  proc = subprocess.run(args);
+  sys.exit(proc.returncode)
 mapped = ""
 if cmp() == "vs":
   argci += 1
@@ -48,4 +51,5 @@ args.extend(sys.argv[argci:])
 
 # print command we are about to run then run
 print("sasuke.py: " + " ".join(args))
-subprocess.run(args)
+proc = subprocess.run(args)
+sys.exit(proc.returncode)
