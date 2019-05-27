@@ -9,19 +9,18 @@ args = ["git"]
 def cmp():
   return sys.argv[argci].lower()
 
+mappings = {
+  "uchiha": "clone",
+  "7/23": "init",
+  "kunai": "add",
+  "choke": "rm",
+  "speed": "mv",
+  "sharingan": "pull"
+}
+
 def map(cmd):
-  if cmd[0] == "uchiha":
-    return "clone"
-  elif cmd[0] == "7/23":
-    return "init"
-  elif cmd[0] == "kunai":
-    return "add"
-  elif cmd[0] == "choke":
-    return "rm"
-  elif cmd[0] == "speed":
-    return "mv"
-  elif cmd[0] == "sharingan":
-    return "pull"
+  if cmd[0] in mappings:
+    return mappings[cmd[0]]
   elif cmd[0] == "vs":
     if cmd[1] == "itachi":
       return "commit"
@@ -45,8 +44,7 @@ args.append(mapped)
 argci += 1
 
 # pipe the rest of argv
-for i in range(argci, len(sys.argv)):
-  args.append(sys.argv[i])
+args.extend(sys.argv[argci:])
 
 # print command we are about to run then run
 print("sasuke.py: " + " ".join(args))
