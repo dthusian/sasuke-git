@@ -12,15 +12,27 @@ def cmp():
 def map(cmd):
   if cmd[0] == "uchiha":
     return "clone"
+  elif cmd[0] == "7/23":
+    return "init"
   elif cmd[0] == "kunai":
     return "add"
   elif cmd[0] == "choke":
     return "rm"
+  elif cmd[0] == "speed":
+    return "mv"
+  elif cmd[0] == "sharingan":
+    return "pull"
   elif cmd[0] == "vs":
     if cmd[1] == "itachi":
       return "commit"
     elif cmd[1] == "naruto":
       return "push"
+    else:
+      print("sasuke.py: bad option")
+      sys.exit(1)
+  else:
+    print("sasuke.py: bad option")
+    sys.exit(1)
 
 # map the action
 mapped = ""

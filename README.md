@@ -6,6 +6,8 @@ sasuke-git is a cmdline wrapper for common git commands. Instructions to use as 
 - `sasuke uchiha` becomes `git clone`
 - `sasuke kunai` becomes `git add`
 - `sasuke choke` becomes `git rm`
+- `sasuke speed` becomes `git mv`
+- `sasuke sharingan` becomes `git pull`
 - `sasuke vs itachi` becomes `git commit`
 - `sasuke vs naruto` becomes `git push`
 
