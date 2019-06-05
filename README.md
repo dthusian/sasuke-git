@@ -4,6 +4,7 @@ Version management with an extra dose of anime
 sasuke-git is a cmdline wrapper for common git commands. Instructions to use as follows:
 
 - `sasuke uchiha` becomes `git clone`
+- `sasuke 7/23` becomes `git init` (his canon birthday)
 - `sasuke kunai` becomes `git add`
 - `sasuke choke` becomes `git rm`
 - `sasuke speed` becomes `git mv`
