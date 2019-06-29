@@ -29,6 +29,14 @@ def map(cmd):
     else:
       print("sasuke.py: bad option")
       sys.exit(1)
+  elif cmd[0] == "x":
+    if cmd[1] == "naruto":
+      return "submodule"
+    elif cmd[1] == "sakura" or cmd[1] == "uselessness":
+      return "diff"
+    else:
+      print("sasuke.py: bad option")
+      sys.exit(1)
   else:
     print("sasuke.py: bad option")
     sys.exit(1)
